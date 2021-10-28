@@ -92,8 +92,8 @@
   <script>
     let name = localStorage.name || ''
     if (window.location.search.substr(1) != '') {
-      name = window.location.search.substr(1)
-      localStorage.name = window.location.search.substr(1)
+      name = decodeURIComponent(window.location.search.substr(1))
+      localStorage.name = name
     }
     let theme = {
       pagi: {
